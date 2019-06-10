@@ -73,7 +73,11 @@ background:black;
 display: table;
 margin: auto;
 }
-
+#clear{
+    color: white;
+    position: absolute;
+    left: 50px;}
+color:white;}
 
 </style>
 
@@ -120,13 +124,14 @@ Color:
 <img src="img/eraser.png" onclick="changeColor(bgcolor);"> 
 <span  onclick="hosem('cont2')" >HIDE</span>
 </div></div>
+<div id="clear" onclick="ola()" ><img width="40px" src="img/eraser2.png"/></div>
 </body>
 </html>
 
 
 <script type='text/javascript'>
 
-var bgcolor= "#222";
+var bgcolor= "#000";
 var colorP= "#efefef";
 var sizeP= "0.2";
 
@@ -204,7 +209,7 @@ var myCanvas = document.getElementById('myCanvas');
 					evt.touches[0].pageY
 				);
 				
-				ctx.strokeStyle = '#000';
+				ctx.strokeStyle = '#fff';
 				ctx.lineWidth = sizeP;
 				ctx.stroke();
 			}
@@ -222,7 +227,7 @@ var myCanvas = document.getElementById('myCanvas');
 	
 	// Disable Page Move
 	document.body.addEventListener('touchmove',function(evt){
-		evt.preventDefault();
+		//evt.preventDefault();
 	},false);
 };
 
